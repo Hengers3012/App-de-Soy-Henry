@@ -3,7 +3,7 @@ import styles from "./About.module.css";
 export default function About(props) {
   return (
     <div className={styles.container}>
-      <h1>Bienvenidos</h1>
+      <h1>Sean Bienvenidos</h1>
       <p>
         La App de Rick and Morty es muy divertida, aqui podemos obsevar a los
         personajes de toda la serie y sus descripciones.

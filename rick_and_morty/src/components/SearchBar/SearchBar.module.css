@@ -9,7 +9,7 @@
   border-radius: 10px 0 0 10px;
   border-color: rgb(0, 255, 76);
   font: rgb(0, 255, 76);
-  outline: hidden;
+  outline: none;
 }
 .buttonAgregar {
   border-radius: 0 10px 10px 0;
