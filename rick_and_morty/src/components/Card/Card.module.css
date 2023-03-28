@@ -19,6 +19,10 @@
   display: flex;
   justify-content: flex-end;
 }
+.contenedorBtnFav {
+  display: flex;
+  justify-content: flex-start;
+}
 
 .buttonX {
   border-radius: 20px;

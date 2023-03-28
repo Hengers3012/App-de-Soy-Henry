@@ -22,6 +22,7 @@ export default function Nav(props) {
     <div className={styles.navContenedor}>
       <NavLinkMe to="/home">Home</NavLinkMe>
       <NavLinkMe to="/about">About</NavLinkMe>
+      <NavLinkMe to="/favorites">Favorites</NavLinkMe>
       <SearchBar onSearch={(characterID) => props.onSearch(characterID)} />
       <button className="BtnLogOut" onClick={handleLogOut}>
         LogOut

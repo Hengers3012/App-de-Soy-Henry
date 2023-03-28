@@ -8,6 +8,7 @@ import Cards from "./components/Cards/Cards.jsx";
 import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Formulario/Form.jsx";
+import Favorites from "./components/Favorites/Favorites.jsx";
 import "./App.css";
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
   };
 
   const login = (userData) => {
-    // {userName : "fmontoya@soyhenry.com", password: "feli123"}
+    // {userName : "hengersrosario@soyhenry.com", password: "30Heng12"}
     if (userData.userName === userName && userData.password === password) {
       setAccess(true);
       navigate("/home");
@@ -74,6 +75,7 @@ function App() {
           element={<Cards characters={characters} onClose={onClose} />}
         />
         <Route path="/about" element={<About />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/detail/:detailId" element={<Detail />} />
         {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
       </Routes>

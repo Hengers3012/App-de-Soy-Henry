@@ -1,12 +1,6 @@
 import Card from "../Card/Card.jsx";
 
-import styled from "styled-components";
-
-const Div = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align: center;
-`;
+import { Div } from "../Assets/StyleComponets.js";
 
 export default function Cards(props) {
   const { characters } = props;
