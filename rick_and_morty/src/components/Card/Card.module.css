@@ -1,61 +1,66 @@
-.contenedor{
-    display: flex;
-    flex-direction: column;
-    width: 230px;
-    height: 270px;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.9);
-    transition: all 0.5s ease;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 230px;
+  height: auto;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 94, 0.6);
+  white-space: break-word;
 }
 
 .container:hover {
-    transform: scale(1.1);
-  }
-
-.contenedorBtnX{
-    display: flex;
-    justify-content: flex-end;
+  transform: scale(1.1);
 }
 
-.buttonX{
-    border-radius: 20px;
-    margin: 10px 10px 0 0;
-    border: none;
-    background-color: red;
-    color: aliceblue;
+.contenedorBtnX {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonX {
+  border-radius: 20px;
+  margin: 10px 10px 0 0;
+  border: none;
+  background-color: rgb(255, 149, 0);
+  color: aliceblue;
 }
 
 .button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
-  img {
-    width: 200px;
-    border-radius: 10px 10px 0 0;
-  }
-  .contenedorImage {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 10px;
-    align-items: center;
-  }
-  .namePersonaje {
-    background-color: rgba(0, 255, 255, 0.6);
-    position: absolute;
-    margin-bottom: 0px;
-  }
-  .propsDContenedor {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: black;
-    margin: 0px;
-    color: aqua;
-    border-radius: 0 0 20px 20px;
-  }
-  
-  .propsDContenedor h2 {
-      margin: 0;
-  }
-  
+img {
+  width: 210px;
+  border-radius: 5px 5px 5px 5px;
+}
+.contenedorImage {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 10px;
+  align-items: center;
+}
+.namePersonaje {
+  background-color: rgb(0, 255, 76, 0.7);
+  position: relative;
+
+  margin-bottom: 10px;
+}
+.propsDContenedor {
+  display: flex;
+  margin: auto;
+  text-align: left;
+  align-content: space-between;
+  justify-content: space-evenly;
+  /* background-color: black; */
+  margin: 0px;
+  color: rgb(0, 255, 76);
+  /* border-radius: 0 0 20px 20px; */
+}
+
+.propsDContenedor h2 {
+  margin: 2px;
+}

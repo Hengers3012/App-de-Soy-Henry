@@ -1,26 +1,25 @@
 .contendeorPrincipal {
-    display: flex;
+  display: flex;
+  color: rgb(1, 248, 248);
+  justify-content: right;
+}
+.inputAgregar {
+  background-color: rgb(255, 255, 255);
+  font-family: cursive;
+  border-radius: 10px 0 0 10px;
+  border-color: rgb(0, 255, 76);
+  font: rgb(0, 255, 76);
+  outline: hidden;
+}
+.buttonAgregar {
+  border-radius: 0 10px 10px 0;
+  border-color: rgb(0, 255, 76);
+  color: rgb(59, 140, 82);
+  background-color: #282c34;
+}
 
-    justify-content: right;
-  }
-  .inputAgregar {
-    background-color: rgba(0, 0, 0, 0.5);
-    font-family: cursive;
-    border-radius: 10px 0 0 10px;
-    border-color: rgb(0, 255, 76);
-    font: white;
-    outline: none;
-  }
-  .buttonAgregar {
-    border-radius: 0 10px 10px 0;
-    border-color: rgb(0, 255, 76);
-    color: rgb(59, 140, 82);
-    background-color: #282c34;
-  }
-  
-  .buttonAgregar:hover {
-    color: #282c34;
-    background-color: rgb(0, 255, 76);
-    cursor: pointer;
-  }
-  
+.buttonAgregar:hover {
+  color: #282c34;
+  background-color: rgb(0, 255, 76);
+  cursor: pointer;
+}

@@ -10,7 +10,7 @@ export default function Card({ name, species, image, gender, onClose }) {
       </div>
       <div className={styles.contenedorImage}>
         <h2 className={styles.namePersonaje}>{name}</h2>
-        <img src={image} alt="Not found" />
+        <img src={image} alt="" />
       </div>
       <div className={styles.propsDContenedor}>
         <h2>{species}</h2>
