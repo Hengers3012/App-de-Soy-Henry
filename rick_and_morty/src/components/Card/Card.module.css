@@ -64,3 +64,8 @@ img {
 .propsDContenedor h2 {
   margin: 2px;
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

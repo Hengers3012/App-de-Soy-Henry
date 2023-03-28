@@ -1,10 +1,13 @@
-import "./App.css";
-import { useState } from "react";
+//import SearchBar from "./components/SearchBar/SearchBar.jsx";
+//import characters, { Rick } from "./data.js";import "./App.css";
 //import Card from "./components/Card/Card.jsx";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav/Nav.jsx";
 import Cards from "./components/Cards/Cards.jsx";
-//import SearchBar from "./components/SearchBar/SearchBar.jsx";
-//import characters, { Rick } from "./data.js";
+import About from "./components/About/About.jsx";
+import Detail from "./components/Detail/Detail.jsx";
+import "./App.css";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -20,7 +23,7 @@ function App() {
             : ""
         )
           ? setCharacters([...characters, data])
-          : alert("Personaje no encontrado");
+          : alert("Este personaje ya existe en la lista");
       })
       .catch((error) => console.log(error));
   };
@@ -32,29 +35,24 @@ function App() {
 
   return (
     <div className="App" style={{ padding: "25px" }}>
-      <div>
-        {/* <Card
+      {/* <Card
           name={Rick.name}
           species={Rick.species}
           gender={Rick.gender}
           image={Rick.image}
           onClose={() => window.alert("Emulamos que se cierra la card")}
         /> */}
-        <Nav onSearch={onSearch} />
-      </div>
-      <hr />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <Cards characters={characters} onClose={onClose} />
-      </div>
-      <hr />
-      <div>
+      <Nav onSearch={onSearch} />
+
+      <Routes>
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/detail/:detailId" element={<Detail />} />
         {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
-      </div>
+      </Routes>
     </div>
   );
 }
