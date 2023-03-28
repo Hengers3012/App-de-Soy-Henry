@@ -1,0 +1,9 @@
+.navContenedor {
+  padding: 10px;
+  background-color: rgba(17, 20, 17, 0.7);
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
