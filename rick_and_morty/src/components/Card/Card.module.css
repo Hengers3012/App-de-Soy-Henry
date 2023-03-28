@@ -28,7 +28,8 @@
   color: aliceblue;
 }
 
-.button:hover {
+.buttonX:hover {
+  background-color: red;
   cursor: pointer;
   transform: scale(1.1);
 }

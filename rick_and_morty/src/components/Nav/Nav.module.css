@@ -8,9 +8,8 @@
   border-radius: 20px;
   margin-bottom: 20px;
 }
-.BtnLogOut {
-  border-radius: 20px;
-  margin-left: 10px;
+button {
+  border-radius: 10px;
 }
 .active {
   -webkit-text-stroke: 2px rgb(0, 255, 76, 0.45);
