@@ -1,23 +1,24 @@
 .container {
   align-items: center;
   background-image: url(../../Image/Form-2.jpg);
-  width: 290px;
-  height: 655px;
+  width: 270px;
+  height: 500px;
   background-size: contain;
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  padding: 5px;
+  padding-top: 100px;
+  padding-left: auto;
   border-radius: 20px;
-  margin: 5px;
+  margin: auto;
 }
 input {
   font-size: medium;
 }
 label {
-  font-size: x-large;
+  font-size: medium;
   color: rgb(0, 255, 76, 0.8);
 }
 button {

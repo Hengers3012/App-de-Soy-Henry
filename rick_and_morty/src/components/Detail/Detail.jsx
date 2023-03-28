@@ -11,8 +11,8 @@ export default function Detail(props) {
       .then((data) => {
         data.name ? setCharacter(data) : alert("No hay personajes con ese ID");
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.log(error);
         alert("Oye Rick, algo estuvo mal!!!");
       });
     return () => setCharacter({});

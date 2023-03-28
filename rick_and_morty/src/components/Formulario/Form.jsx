@@ -1,7 +1,7 @@
 import styles from "./Form.module.css";
 import { useEffect, useState } from "react";
 import { validate } from "./validation";
-import FormImage from "../../Image/Form-2.jpg";
+//import FormImage from "../../Image/Form-2.jpg";
 export default function Form(props) {
   const [userData, setUserData] = useState({
     userName: "",
@@ -13,7 +13,7 @@ export default function Form(props) {
   });
   const handleChange = (event) => {
     const { name, value } = event.target;
-    // userName : Feli, password: ""
+    // userName : Hengers, password: "12345678"
     setUserData({
       ...userData,
       [name]: value,

@@ -2,7 +2,7 @@
 const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 const validLettersAndNumbers = new RegExp(/^(?=.*[a-z])(?=.*[0-9])/);
 export const validate = (inputs) => {
-  // inputs --. {userName: "Feli", password :""}
+  // inputs --. {userName: "Hengers", password :"12345678"}
   const errors = {};
   if (!regexEmail.test(inputs.userName)) {
     errors.userName = "Debe escribir un email valido";
