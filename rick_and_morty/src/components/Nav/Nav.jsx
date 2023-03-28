@@ -31,12 +31,16 @@ const NavLinkMe = ({ to, children, ...props }) => {
   );
 };
 export default function Nav(props) {
-  //console.log(props) // {onSearch : fn()}
+  const handleLogOut = () => {
+    props.logOut();
+  };
+
   return (
     <div className={styles.navContenedor}>
       <NavLinkMe to="/home">Home</NavLinkMe>
       <NavLinkMe to="/about">About</NavLinkMe>
       <SearchBar onSearch={(characterID) => props.onSearch(characterID)} />
+      <button onClick={handleLogOut}>LogOut</button>
     </div>
   );
 }

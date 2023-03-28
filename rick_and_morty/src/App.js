@@ -1,16 +1,22 @@
 //import SearchBar from "./components/SearchBar/SearchBar.jsx";
 //import characters, { Rick } from "./data.js";import "./App.css";
 //import Card from "./components/Card/Card.jsx";
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Nav from "./components/Nav/Nav.jsx";
 import Cards from "./components/Cards/Cards.jsx";
 import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
+import Form from "./components/Formulario/Form.jsx";
 import "./App.css";
 
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const userName = "hengersrosario@soyhenry.com";
+  const password = "30Heng12";
   const [characters, setCharacters] = useState([]);
+  const [access, setAccess] = useState(false);
 
   const onSearch = (id) => {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
@@ -33,6 +39,23 @@ function App() {
     setCharacters(filtered);
   };
 
+  const login = (userData) => {
+    // {userName : "fmontoya@soyhenry.com", password: "feli123"}
+    if (userData.userName === userName && userData.password === password) {
+      setAccess(true);
+      navigate("/home");
+    }
+  };
+
+  const logOut = () => {
+    access && setAccess(false);
+    navigate("/");
+  };
+
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access, navigate]);
+
   return (
     <div className="App" style={{ padding: "25px" }}>
       {/* <Card
@@ -42,9 +65,10 @@ function App() {
           image={Rick.image}
           onClose={() => window.alert("Emulamos que se cierra la card")}
         /> */}
-      <Nav onSearch={onSearch} />
+      {location.pathname !== "/" && <Nav onSearch={onSearch} logOut={logOut} />}
 
       <Routes>
+        <Route path="/" element={<Form login={login} />} />
         <Route
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}
