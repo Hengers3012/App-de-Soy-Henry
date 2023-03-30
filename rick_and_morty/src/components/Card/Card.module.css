@@ -49,6 +49,7 @@ img {
   align-items: center;
 }
 .namePersonaje {
+  width: 230px;
   background-color: rgb(0, 255, 76, 0.7);
   position: relative;
 

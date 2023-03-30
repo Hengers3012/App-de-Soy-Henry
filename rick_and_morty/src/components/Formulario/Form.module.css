@@ -1,8 +1,8 @@
 .container {
   align-items: center;
   background-image: url(../../Image/Form-2.jpg);
-  width: 270px;
-  height: 500px;
+  width: 250px;
+  height: 70vh;
   background-size: contain;
   background-color: aliceblue;
   display: flex;

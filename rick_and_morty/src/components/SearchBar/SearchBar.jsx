@@ -16,6 +16,7 @@ export default function SearchBar(props) {
         onChange={handleInputChange}
       />
       <button
+        id="logOut"
         className={styles.buttonAgregar}
         onClick={() => props.onSearch(character)}
       >

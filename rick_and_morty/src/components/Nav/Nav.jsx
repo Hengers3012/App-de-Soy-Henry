@@ -21,20 +21,23 @@ export default function Nav(props) {
 
   return (
     <div className={styles.navContenedor}>
-      <div className={styles.img}>
+      <div className={styles.navPart1}>
         <img
           src="https://hbomax-images.warnermediacdn.com/images/GXkRjxwjR68PDwwEAABKJ/logoburnedinleft?size=600x181&format=png&partner=hbomaxcom&host=art-gallery.api.hbo.com&language=es-es&w=600"
           alt=""
         />
+        <div className={styles.navlinks}>
+          <NavLinkMe to="/home">Home</NavLinkMe>
+          <NavLinkMe to="/about">About</NavLinkMe>
+          <NavLinkMe to="/favorites">Favorites</NavLinkMe>
+        </div>
       </div>
-
-      <NavLinkMe to="/home">Home</NavLinkMe>
-      <NavLinkMe to="/about">About</NavLinkMe>
-      <NavLinkMe to="/favorites">Favorites</NavLinkMe>
-      <SearchBar onSearch={(characterID) => props.onSearch(characterID)} />
-      <button className="BtnLogOut" onClick={handleLogOut}>
-        LogOut
-      </button>
+      <div className={styles.navsearch}>
+        <SearchBar onSearch={(characterID) => props.onSearch(characterID)} />
+        <button className={styles.BtnLogOut} onClick={handleLogOut}>
+          LogOut
+        </button>
+      </div>
     </div>
   );
 }
