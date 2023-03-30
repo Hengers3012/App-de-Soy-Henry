@@ -39,10 +39,11 @@
 }
 
 .navlinks {
-  color: aliceblue;
+  color: silver;
   width: fit-content;
   display: flex;
   justify-content: space-between;
+  font-size: larger;
 }
 
 .navlinks * {
