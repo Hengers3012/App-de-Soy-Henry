@@ -1,21 +1,29 @@
 .container {
-  align-items: center;
   background-image: url(../../Image/Form-2.jpg);
-  width: 250px;
-  height: 70vh;
-  background-size: contain;
-  background-color: aliceblue;
+
   display: flex;
-  flex-direction: column;
-  justify-content: start;
+
+  margin: auto;
+  width: 20%;
+  height: 70vh;
+
   align-items: center;
+  align-items: center;
+  flex-direction: column;
+
+  justify-self: center;
+  justify-content: start;
+
+  background-size: cover;
+  background-color: aliceblue;
+
   padding-top: 100px;
   padding-left: auto;
-  border-radius: 20px;
-  margin: auto;
+  border-radius: 15px;
 }
 input {
   font-size: medium;
+  width: 230px;
 }
 label {
   font-size: medium;
