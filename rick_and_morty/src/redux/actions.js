@@ -8,7 +8,6 @@ export const addMyFavorite = (character) => {
   };
 };
 export const deleteFavorite = (id) => {
-  //Logica de Delete Favorite
   return {
     type: DELETE_FAVORITE,
     payload: id,
