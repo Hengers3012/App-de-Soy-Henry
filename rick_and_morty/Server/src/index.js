@@ -1,9 +1,11 @@
 const http = require("http");
-const data = require("./utils/data");
+//const data = require("./utils/data");
+const getCharById = require("../src/controllers/getCharById.js");
 const PORT = 3001;
 http
   .createServer((req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
+    //dentro del parámetro req.url está el id del personaje
     console.log(req.url);
     try {
       const { url } = req;
@@ -11,25 +13,28 @@ http
         const id = url.split("/").at(-1);
         console.log(id);
 
-        const character = data.find((charact) => charact.id == id);
-        console.log(character);
+        getCharById(res, id);
 
-        if (character) {
-          res.writeHead(200, { "Content-Type": "application/json" });
+        //   const character = data.find((charact) => charact.id == id);
+        //   console.log(character);
 
-          res.end(JSON.stringify(character));
-        } else {
-          res.writeHead(404, { "Content-Type": "application/json" });
+        //   if (character) {
+        //     res.writeHead(200, { "Content-Type": "application/json" });
 
-          res.end(
-            JSON.stringify({
-              error: `The character could not be found with this id: ${id}`,
-            })
-          );
-        }
+        //     res.end(JSON.stringify(character));
+        //   } else {
+        //     res.writeHead(404, { "Content-Type": "application/json" });
+
+        //     res.end(
+        //       JSON.stringify({
+        //         error: `The character could not be found with this id: ${id}`,
+        //       })
+        //     );
+        //   }
       }
     } catch (error) {
       console.log(error);
+
       throw new Error(error);
     }
   })
