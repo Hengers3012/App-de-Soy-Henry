@@ -22,7 +22,9 @@ http
           res.writeHead(404, { "Content-Type": "application/json" });
 
           res.end(
-            JSON.stringify({ error: `Character not found with id: ${id}` })
+            JSON.stringify({
+              error: `The character could not be found with this id: ${id}`,
+            })
           );
         }
       }
