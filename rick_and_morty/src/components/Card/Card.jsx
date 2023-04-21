@@ -13,7 +13,7 @@ function Card({
   onClose,
   deleteFavorite,
   addMyFavorite,
-  misFavoritas,
+  allCharacters,
 }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -27,12 +27,12 @@ function Card({
     }
   };
   useEffect(() => {
-    misFavoritas.forEach((favorit) => {
+    allCharacters.forEach((favorit) => {
       if (favorit.id === id) {
         setIsFavorite(true);
       }
     });
-  }, [misFavoritas]);
+  }, [allCharacters]);
 
   return (
     <div className={styles.contenedor}>
@@ -66,7 +66,7 @@ function Card({
 
 const mapStateToProps = (state) => {
   return {
-    misFavoritas: state.misFavoritas,
+    allCharacters: state.allCharacters,
   };
 };
 

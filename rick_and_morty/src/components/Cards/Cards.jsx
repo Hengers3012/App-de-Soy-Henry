@@ -1,5 +1,4 @@
 import Card from "../Card/Card.jsx";
-
 import { Div } from "../Assets/StyleComponets.js";
 
 export default function Cards(props) {
