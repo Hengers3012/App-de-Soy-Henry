@@ -13,12 +13,13 @@ const reducer = (state = initialState, { type, payload }) => {
         misFavoritas: [...state.allCharacters, payload],
       };
     case DELETE_FAVORITE:
-      const filtered = state.misFavoritas.filter(
+      const filtered = state.allCharacters.filter(
         (character) => character.id !== payload
       );
       return {
         ...state,
         misFavoritas: filtered,
+        allCharacters: filtered,
       };
 
     case FILTER:
