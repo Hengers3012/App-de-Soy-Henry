@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+rick_and_morty/Server/node_modules/.package-lock.json
 /.pnp
 .pnp.js
 
