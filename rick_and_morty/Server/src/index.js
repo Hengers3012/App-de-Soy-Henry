@@ -1,43 +1,62 @@
-const http = require("http");
-//const data = require("./utils/data");
-const getCharById = require("../src/controllers/getCharById.js");
+//--------------------------------------------------------------------------------------
+//                                    codigo con Express:
+//--------------------------------------------------------------------------------------
+const express = require("express");
+const server = express();
 const PORT = 3001;
-http
-  .createServer((req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    //dentro del parámetro req.url está el id del personaje
-    console.log(req.url);
-    try {
-      const { url } = req;
-      if (url.includes("/rickandmorty/character")) {
-        const id = url.split("/").at(-1);
-        console.log(id);
 
-        getCharById(res, id);
+server.listen(PORT, () => {
+  console.log("Server raised in port: " + PORT);
+});
 
-        //   const character = data.find((charact) => charact.id == id);
-        //   console.log(character);
+//--------------------------------------------------------------------------------------
+//                                    codigo con HTTP:
+//--------------------------------------------------------------------------------------
+// const http = require("http");
+// //const data = require("./utils/data");
+// const getCharById = require("../src/controllers/getCharById.js");
+// const PORT = 3001;
+// http
+//   .createServer((req, res) => {
+//     res.setHeader("Access-Control-Allow-Origin", "*");
+//     //dentro del parámetro req.url está el id del personaje
+//     console.log(req.url);
+//     try {
+//       const { url } = req;
+//       if (url.includes("/rickandmorty/character")) {
+//         const id = url.split("/").at(-1);
+//         console.log(id);
 
-        //   if (character) {
-        //     res.writeHead(200, { "Content-Type": "application/json" });
+//         getCharById(res, id);
 
-        //     res.end(JSON.stringify(character));
-        //   } else {
-        //     res.writeHead(404, { "Content-Type": "application/json" });
+//              -----------------------------------------------------------
+//                             Reemplazado por getCharById.js
+//              -----------------------------------------------------------
+//         //   const character = data.find((charact) => charact.id == id);
+//         //   console.log(character);
 
-        //     res.end(
-        //       JSON.stringify({
-        //         error: `The character could not be found with this id: ${id}`,
-        //       })
-        //     );
-        //   }
-      }
-    } catch (error) {
-      console.log(error);
+//         //   if (character) {
+//         //     res.writeHead(200, { "Content-Type": "application/json" });
 
-      throw new Error(error);
-    }
-  })
-  .listen(PORT, () => {
-    console.log(`Server on port ${PORT}`);
-  });
+//         //     res.end(JSON.stringify(character));
+//         //   } else {
+//         //     res.writeHead(404, { "Content-Type": "application/json" });
+
+//         //     res.end(
+//         //       JSON.stringify({
+//         //         error: `The character could not be found with this id: ${id}`,
+//         //       })
+//         //     );
+//         //   }
+//              -------------------------------------------------------------
+
+//       }
+//     } catch (error) {
+//       console.log(error);
+
+//       throw new Error(error);
+//     }
+//   })
+//   .listen(PORT, () => {
+//     console.log(`Server on port ${PORT}`);
+//   });
