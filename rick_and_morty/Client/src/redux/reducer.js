@@ -9,18 +9,32 @@ const reducer = (state = initialState, { type, payload }) => {
     case ADD_MY_FAVORITE:
       return {
         ...state,
-        allCharacters: [...state.allCharacters, payload],
-        misFavoritas: [...state.allCharacters, payload],
+        misFavoritas: payload,
+        allCharacters: payload,
       };
+
+    //-------------------------------------------------------------------------------
+    //                Versión sin Express en el Server
+    //-------------------------------------------------------------------------------
+    // return {
+    //   ...state,
+    //   allCharacters: [...state.allCharacters, payload],
+    //   misFavoritas: [...state.allCharacters, payload],
+    // };
     case DELETE_FAVORITE:
-      const filtered = state.allCharacters.filter(
-        (character) => character.id !== payload
-      );
-      return {
-        ...state,
-        misFavoritas: filtered,
-        allCharacters: filtered,
-      };
+      return { ...state, misFavoritas: payload };
+
+    //-------------------------------------------------------------------------------
+    //                Versión sin Express en el Server
+    //-------------------------------------------------------------------------------
+    // const filtered = state.allCharacters.filter(
+    //   (character) => character.id !== payload
+    // );
+    // return {
+    //   ...state,
+    //   misFavoritas: filtered,
+    //   allCharacters: filtered,
+    // };
 
     case FILTER:
       const filterForGender = [...state.allCharacters].filter(

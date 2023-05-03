@@ -1,6 +1,7 @@
 //import SearchBar from "./components/SearchBar/SearchBar.jsx";
 //import characters, { Rick } from "./data.js";import "./App.css";
 //import Card from "./components/Card/Card.jsx";
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Nav from "./components/Nav/Nav.jsx";
@@ -14,8 +15,11 @@ import "./App.css";
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
-  const userName = "hengersrosario@soyhenry.com";
-  const password = "30Heng12";
+  //-------------------------------------------------------------------------------
+  //      Constantes de User y Pass para la APP sin Express en el Server
+  //-------------------------------------------------------------------------------
+  // const userName = "hengersrosario@soyhenry.com";
+  // const password = "30Heng12";
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
 
@@ -40,13 +44,26 @@ function App() {
     setCharacters(filtered);
   };
 
-  const login = (userData) => {
-    // {userName : "hengersrosario@soyhenry.com", password: "30Heng12"}
-    if (userData.userName === userName && userData.password === password) {
-      setAccess(true);
-      navigate("/home");
-    }
-  };
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = "http://localhost:3001/rickandmorty/login/";
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+      const { access } = data;
+      setAccess(data);
+      access && navigate("/home");
+    });
+  }
+
+  //-------------------------------------------------------------------------------
+  //                Versión sin Express en el Server
+  //-------------------------------------------------------------------------------
+  // const login = (userData) => {
+  //   // {userName : "hengersrosario@soyhenry.com", password: "30Heng12"}
+  //   if (userData.userName === userName && userData.password === password) {
+  //     setAccess(true);
+  //     navigate("/home");
+  //   }
+  // };
 
   const logOut = () => {
     access && setAccess(false);

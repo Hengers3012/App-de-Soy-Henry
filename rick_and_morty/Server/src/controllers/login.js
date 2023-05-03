@@ -1,4 +1,4 @@
-const usuarios = require("../utils/usuarios");
+const usuarios = require("../utils/users");
 
 const login = (req, res) => {
   const { email, password } = req.query;
