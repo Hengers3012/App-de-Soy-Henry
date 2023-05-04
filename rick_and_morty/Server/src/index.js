@@ -2,7 +2,7 @@
 //                                    codigo con Express:
 //--------------------------------------------------------------------------------------
 const express = require("express");
-const router = require("./routes/index");
+const router = require("./routes/index.js");
 const server = express();
 const PORT = 3001;
 

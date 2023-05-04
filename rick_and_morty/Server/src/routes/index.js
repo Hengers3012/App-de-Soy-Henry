@@ -1,18 +1,15 @@
 const express = require("express");
-const router = express.Router();
-
-// const { login } = require("../controllers/login.js");
-// const { getCharById } = require("../controllers/getCharById.js");
 const {
   getCharById,
   login,
   postFav,
   deleteFav,
-} = require("../controllers/index");
+} = require("../controllers/index.js");
+const router = express.Router();
 
 router.get("/character/:id", getCharById);
 router.get("/login", login);
-router.post("/favElement", postFav);
-router.delete("/favElement/:id", deleteFav);
+router.post("/fav", postFav);
+router.delete("/fav/:id", deleteFav);
 
 module.exports = router;
