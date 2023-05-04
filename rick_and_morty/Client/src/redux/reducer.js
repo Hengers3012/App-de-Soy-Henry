@@ -9,6 +9,7 @@ const reducer = (state = initialState, { type, payload }) => {
     case ADD_MY_FAVORITE:
       return {
         ...state,
+
         misFavoritas: payload,
         allCharacters: payload,
       };
@@ -22,7 +23,7 @@ const reducer = (state = initialState, { type, payload }) => {
     //   misFavoritas: [...state.allCharacters, payload],
     // };
     case DELETE_FAVORITE:
-      return { ...state, misFavoritas: payload };
+      return { ...state, misFavoritas: payload, allCharacters: payload };
 
     //-------------------------------------------------------------------------------
     //                Versión sin Express en el Server

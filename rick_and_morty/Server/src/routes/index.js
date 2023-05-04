@@ -8,14 +8,16 @@ const express = require("express");
 //   postFav,
 //   deleteFav,
 // } = require("../controllers/index");
+
 const getCharById = require("../controllers/getCharById");
 const login = require("../controllers/login");
 const { postFav, deleteFav } = require("../controllers/handleFavorites");
+
 const router = express.Router();
 
 router.get("/character/:id", getCharById);
 router.get("/login", login);
-router.post("/fav", postFav);
-router.delete("/fav/:id", deleteFav);
+router.post("/favElement", postFav);
+router.delete("/favElement/:id", deleteFav);
 
 module.exports = router;
