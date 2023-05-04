@@ -1,13 +1,13 @@
-const usuarios = require("../utils/users");
+const users = require("../utils/users");
 
 const login = (req, res) => {
   const { email, password } = req.query;
 
-  const usuario = usuarios.find(
-    (usuario) => usuario.email === email && usuario.password === password
+  const user = users.find(
+    (user) => user.email === email && user.password === password
   );
 
-  if (usuario) {
+  if (user) {
     res.status(200).json({ access: true });
   } else {
     res.status(200).json({ access: false });
