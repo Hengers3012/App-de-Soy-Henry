@@ -72,7 +72,10 @@ function App() {
 
   const onClose = (id) => {
     console.log(id);
-    const filtered = characters.filter((char) => char.id !== Number(id));
+    const filtered = characters.filter(
+      (char) => Number(char.id) !== Number(id)
+    );
+    console.log(filtered);
     setCharacters(filtered);
   };
 

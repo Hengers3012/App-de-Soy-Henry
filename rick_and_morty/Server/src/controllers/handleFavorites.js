@@ -10,7 +10,7 @@ const deleteFav = (req, res) => {
   console.log(id);
 
   myFavorites = myFavorites.filter(
-    (favElement) => favElement.id !== parseInt(id)
+    (favElement) => parseInt(favElement.id) !== parseInt(id)
   );
   res.json(myFavorites);
 };

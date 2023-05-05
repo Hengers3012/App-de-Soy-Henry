@@ -32,7 +32,7 @@ function Card({
         setIsFavorite(true);
       }
     });
-  }, [allCharacters]);
+  }, [allCharacters, id]);
 
   return (
     <div className={styles.contenedor}>
