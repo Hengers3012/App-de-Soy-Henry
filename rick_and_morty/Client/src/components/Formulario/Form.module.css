@@ -54,28 +54,29 @@
   border-radius: 15px;
 }
 
-input {
+.RaMLogin input {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 27px;
+  color: rgb(74, 83, 82);
   width: 80%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 label {
   font-size: 25px;
-  -webkit-text-stroke: 2px rgba(7, 194, 19, 0.45);
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 5px 5px 5px #25bf10af;
+  -webkit-text-stroke: 2px rgba(57, 169, 91, 0.45);
+  color: rgba(123, 255, 0, 0.8);
 }
 .Btn_Log button {
   font-family: "Anton", sans-serif;
+  margin: 1px 1px 1px 1px;
   width: 110%;
   font-size: 35px;
   height: auto;
   border-radius: 10px;
 }
 .Btn_Log button:hover {
-  background-color: rgba(98, 255, 0, 0.574);
+  background-color: rgba(124, 255, 43, 0.783);
 }
 .warning {
   border-color: red;
@@ -85,8 +86,8 @@ label {
   width: 550px;
 }
 .Image_RM {
-  filter: invert(0.6) sepia(0.4) hue-rotate(140deg) saturate(1500%);
-  padding-bottom: 50px;
-  height: 100px;
+  /* filter: invert(0.6) sepia(0.4) hue-rotate(140deg) saturate(1500%); */
+  padding-bottom: 25px;
+  height: 200px;
   width: auto;
 }

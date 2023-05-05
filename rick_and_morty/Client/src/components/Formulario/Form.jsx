@@ -50,12 +50,12 @@ export default function Form(props) {
           <div>
             <img
               className={styles.Image_RM}
-              src="https://hbomax-images.warnermediacdn.com/images/GXkRjxwjR68PDwwEAABKJ/logoburnedinleft?size=600x181&format=png&partner=hbomaxcom&host=art-gallery.api.hbo.com&language=es-es&w=600"
+              src="https://www.pngmart.com/files/3/Rick-And-Morty-Transparent-Background.png"
               alt=""
             />
           </div>
 
-          <label htmlFor="">Nombre: </label>
+          <label htmlFor="">Email: </label>
           <input
             type="text"
             value={userData.userName}
