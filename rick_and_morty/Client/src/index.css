@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   background-size: cover;
   background-image: url("../src/Image/Fondo-2.jpg");

@@ -33,6 +33,7 @@
 }
 
 .navPart1 img {
+  filter: invert(0.2) sepia(1) hue-rotate(30deg) saturate(2000%);
   margin-left: 10px;
   height: 45px;
   width: auto;

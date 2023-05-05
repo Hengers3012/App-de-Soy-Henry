@@ -1,25 +1,62 @@
 .container {
-  background-image: url(../../Image/Form-2.jpg);
-
-  display: flex;
-
+  /*  */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   margin: auto;
-  width: 20%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  flex-direction: column;
+  width: 70vw;
   height: 70vh;
 
-  align-items: center;
-  align-items: center;
-  flex-direction: column;
+  background-color: rgba(55, 55, 55, 0.4);
 
-  justify-self: center;
-
-  background-size: cover;
-  background-color: aliceblue;
-
-  padding-top: 100px;
+  padding-top: 0px;
   padding-left: auto;
   border-radius: 15px;
 }
+
+.containerFondo {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.RaMFondo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+  transition: all 1.5s ease 0.55s;
+  background-size: cover;
+
+  border-radius: 15px 0 0 15px;
+}
+
+.containerlogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.RaMLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  margin: auto;
+  height: 90%;
+  width: 80%;
+
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+
+  padding-left: auto;
+  border-radius: 15px;
+}
+
 input {
   font-size: medium;
   width: 230px;
@@ -36,4 +73,14 @@ button:hover {
 }
 .warning {
   border-color: red;
+}
+.Image_Fondo {
+  height: 60%;
+  width: 550px;
+}
+.Image_RM {
+  filter: invert(01) sepia(0) hue-rotate(50deg) saturate(2020%);
+  padding-bottom: 50px;
+  height: 100px;
+  width: auto;
 }
