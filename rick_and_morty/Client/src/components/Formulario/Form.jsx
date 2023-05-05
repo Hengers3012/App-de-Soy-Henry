@@ -79,7 +79,9 @@ export default function Form(props) {
             <p style={{ color: "red" }}>{errors.password}</p>
           ) : null}
           <br />
-          <button type="submit">Login</button>
+          <div className={styles.Btn_Log}>
+            <button type="submit">Login</button>
+          </div>
         </div>
       </div>
     </form>
