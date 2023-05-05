@@ -78,7 +78,7 @@ label {
   border-radius: 10px;
 }
 .Btn_Log button:hover {
-  background-color: rgba(124, 255, 43, 0.783);
+  background-color: rgba(123, 255, 0, 0.8);
 }
 .warning {
   border-color: red;
