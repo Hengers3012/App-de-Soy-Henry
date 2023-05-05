@@ -27,8 +27,8 @@ export default function Nav(props) {
           alt=""
         />
         <div className={styles.navlinks}>
-          <NavLinkMe to="/home0">Home</NavLinkMe>
-          <NavLinkMe to="/home">Characters</NavLinkMe>
+          <NavLinkMe to="/home">Home</NavLinkMe>
+          <NavLinkMe to="/characters">Characters</NavLinkMe>
           <NavLinkMe to="/about">About</NavLinkMe>
           <NavLinkMe to="/favorites">Favorites</NavLinkMe>
         </div>

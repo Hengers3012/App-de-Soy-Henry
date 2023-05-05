@@ -148,9 +148,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Form login={login} />} />
-        <Route path="/home0" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route
-          path="/home"
+          path="/characters"
           element={<Cards characters={characters} onClose={onClose} />}
         />
         <Route path="/about" element={<About />} />
