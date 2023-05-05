@@ -15,6 +15,7 @@ import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Formulario/Form.jsx";
 import Favorites from "./components/Favorites/Favorites.jsx";
+import Home from "./components/Home/Home.jsx";
 
 function App() {
   //
@@ -147,12 +148,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Form login={login} />} />
-
+        <Route path="/home0" element={<Home />} />
         <Route
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}
         />
-
         <Route path="/about" element={<About />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/detail/:detailId" element={<Detail />} />
