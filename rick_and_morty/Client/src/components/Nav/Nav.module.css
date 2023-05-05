@@ -5,7 +5,8 @@
 }*/
 
 .navContenedor {
-  height: 52px;
+  height: 60px;
+  width: 90vw;
   background-color: rgba(17, 20, 17, 0.7);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -35,7 +36,7 @@
 .navPart1 img {
   filter: invert(0.2) sepia(1) hue-rotate(30deg) saturate(2000%);
   margin-left: 10px;
-  height: 45px;
+  height: 55px;
   width: auto;
 }
 
