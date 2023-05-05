@@ -2,28 +2,57 @@
 const axios = require("axios");
 const URL = "https://rickandmortyapi.com/api/character/";
 
-const getCharById = (req, res) => {
-  const { id } = req.params;
-  axios
-    .get(URL + id)
-    .then((response) => {
-      const character = response.data;
-      if (character.error) {
-        res.status(404).json({ message: "Not fount" });
-      } else {
-        const { id, name, gender, species, origin, image, status } = character;
-        res.json({ id, name, gender, species, origin, image, status });
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-      res.status(500).json({ message: error.message });
+//--------------------------------------------------------------------------------------
+//                   Codigo con Express y con Asyn-Await (Try Catch)
+//--------------------------------------------------------------------------------------
+const getCharById = async (req, res) => {
+  // con async await
+  try {
+    const { id } = req.params;
+    const { data } = await axios.get(URL + id);
+    const { status, name, species, origin, image, gender } = data;
+
+    res.status(200).json({
+      id,
+      status,
+      name,
+      species,
+      origin,
+      image,
+      gender,
     });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
+
 module.exports = getCharById;
 
 //--------------------------------------------------------------------------------------
-//                                    codigo sin Express:
+//                        Codigo con Express y con Promesas:
+//--------------------------------------------------------------------------------------
+// const getCharById = (req, res) => {
+//   const { id } = req.params;
+//   axios
+//     .get(URL + id)
+//     .then((response) => {
+//       const character = response.data;
+//       if (character.error) {
+//         res.status(404).json({ message: "Not fount" });
+//       } else {
+//         const { id, name, gender, species, origin, image, status } = character;
+//         res.json({ id, name, gender, species, origin, image, status });
+//       }
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//       res.status(500).json({ message: error.message });
+//     });
+// };
+// module.exports = getCharById;
+
+//--------------------------------------------------------------------------------------
+//                                    Codigo sin Express:
 //--------------------------------------------------------------------------------------
 // const axios = require("axios");
 // const URL = "https://rickandmortyapi.com/api/character/";
