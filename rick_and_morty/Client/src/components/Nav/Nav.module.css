@@ -63,7 +63,14 @@
 }
 
 .BtnLogOut {
+  font-size: 20px;
+  font-family: "Anton", sans-serif;
   width: 80px;
-  border-radius: 20px;
+  height: auto;
   margin-left: 15px;
+  margin-right: 25px;
+  border-radius: 10px;
+}
+.BtnLogOut:hover {
+  background-color: rgba(220, 72, 23, 0.8);
 }

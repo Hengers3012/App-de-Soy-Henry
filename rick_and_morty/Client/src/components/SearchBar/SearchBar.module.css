@@ -1,9 +1,12 @@
 .contendeorPrincipal {
   display: flex;
+  height: 35px;
   color: rgb(1, 248, 248);
   justify-content: right;
 }
 .inputAgregar {
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
   background-color: rgb(255, 255, 255);
   font-family: cursive;
   border-radius: 10px 0 0 10px;
@@ -12,6 +15,9 @@
   outline: none;
 }
 .buttonAgregar {
+  width: 75px;
+  font-family: "Anton", sans-serif;
+  font-size: 20px;
   border-radius: 0 10px 10px 0;
   border-color: rgb(0, 255, 76);
   color: rgb(59, 140, 82);
