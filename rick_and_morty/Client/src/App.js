@@ -151,7 +151,11 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route
           path="/characters"
-          element={<Cards characters={characters} onClose={onClose} />}
+          element={
+            <div className="containerCards">
+              <Cards characters={characters} onClose={onClose} />
+            </div>
+          }
         />
         <Route path="/about" element={<About />} />
         <Route path="/favorites" element={<Favorites />} />

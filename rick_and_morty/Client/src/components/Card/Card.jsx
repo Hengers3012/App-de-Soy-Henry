@@ -36,30 +36,32 @@ function Card({
 
   return (
     <div className={styles.contenedor}>
-      <div className={styles.contenedorBtnFav}>
-        {isFavorite ? (
-          <button onClick={handleFavorite}>❤️</button>
-        ) : (
-          <button onClick={handleFavorite}>🤍</button>
-        )}
-      </div>
-      <div className={styles.contenedorBtnX}>
-        {isFavorite ? null : (
-          <button onClick={onClose} className={styles.buttonX}>
-            X
-          </button>
-        )}
+      <div className={styles.actionButtons}>
+        <div className={styles.contenedorBtnFav}>
+          {isFavorite ? (
+            <button onClick={handleFavorite}>❤️</button>
+          ) : (
+            <button onClick={handleFavorite}>🤍</button>
+          )}
+        </div>
+        <div className={styles.contenedorBtnX}>
+          {isFavorite ? null : (
+            <button onClick={onClose} className={styles.buttonX}>
+              ❌
+            </button>
+          )}
+        </div>
       </div>
       <Link to={`/detail/${id}`} className={styles.link}>
         <div className={styles.contenedorImage}>
-          <h2 className={styles.namePersonaje}>{name}</h2>
           <img src={image} alt="" />
         </div>
       </Link>
       <div className={styles.propsDContenedor}>
-        <h2>{species}</h2>
-        <h2>{gender}</h2>
-      </div>{" "}
+        <h2 className={styles.namePersonaje}>{name}</h2>
+        {/* <h2>{species}</h2>
+        <h2>{gender}</h2> */}
+      </div>
     </div>
   );
 }
