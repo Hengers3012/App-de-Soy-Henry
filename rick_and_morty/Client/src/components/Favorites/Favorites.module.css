@@ -1,3 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container h1 {
+  font-size: 20px;
+  color: rgb(158, 228, 208, 0.7);
+}
+
 .selecOrder {
   font-family: "Anton", sans-serif;
   margin: 1px 1px 1px 1px;
@@ -6,6 +16,7 @@
   height: auto;
   border-radius: 10px;
   text-align: center;
+  margin-bottom: 50px;
 }
 .selectGender {
   font-family: "Anton", sans-serif;
@@ -15,4 +26,5 @@
   height: auto;
   border-radius: 10px;
   text-align: center;
+  margin-bottom: 50px;
 }

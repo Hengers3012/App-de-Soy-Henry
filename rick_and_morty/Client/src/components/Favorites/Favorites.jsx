@@ -24,27 +24,33 @@ function Favorites({ misFavoritas }) {
 
   return (
     <div>
-      <div>
-        <select
-          className={styles.selecOrder}
-          name="order"
-          onChange={handleClick}
-        >
-          <option value="Ascendente">Ascendente</option>
-          <option value="Descendente">Descendente</option>
-        </select>
-        <select
-          className={styles.selectGender}
-          name="filter"
-          onChange={(event) => {
-            dispatch(filterCards(event.target.value));
-          }}
-        >
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Genderless">Genderless</option>
-          <option value="unknown">unknown</option>
-        </select>
+      <div className={styles.container}>
+        <div>
+          <h1>Ordenar:</h1>
+          <select
+            className={styles.selecOrder}
+            name="order"
+            onChange={handleClick}
+          >
+            <option value="Ascendente">Ascendente</option>
+            <option value="Descendente">Descendente</option>
+          </select>
+        </div>
+        <div>
+          <h1>Filtar Por:</h1>
+          <select
+            className={styles.selectGender}
+            name="filter"
+            onChange={(event) => {
+              dispatch(filterCards(event.target.value));
+            }}
+          >
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Genderless">Genderless</option>
+            <option value="unknown">unknown</option>
+          </select>
+        </div>
       </div>
       <Div>
         {misFavoritas?.map(({ id, name, species, image, gender }) => (
