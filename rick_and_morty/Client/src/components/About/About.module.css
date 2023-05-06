@@ -1,3 +1,9 @@
 .container {
   color: rgb(158, 228, 208, 0.7);
 }
+.container img {
+  height: 450px;
+  width: auto;
+  margin: auto;
+  padding: 10px;
+}
