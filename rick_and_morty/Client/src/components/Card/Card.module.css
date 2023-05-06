@@ -79,7 +79,7 @@
   align-content: space-between;
   justify-content: space-evenly;
   /* background-color: black; */
-  margin-bottom: -30px;
+  margin-bottom: 30px;
   color: rgb(0, 255, 76);
   /* border-radius: 0 0 20px 20px; */
 }
@@ -92,4 +92,8 @@
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+.contenedorImage:hover {
+  scale: 1.05;
 }
