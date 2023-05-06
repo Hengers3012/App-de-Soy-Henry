@@ -4,6 +4,7 @@ import { Div } from "../Assets/StyleComponets.js";
 // import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { orderCards, filterCards } from "../../redux/actions.js";
+import styles from "../Favorites/Favorites.module.css";
 
 function Favorites({ misFavoritas }) {
   const dispatch = useDispatch();
@@ -24,11 +25,16 @@ function Favorites({ misFavoritas }) {
   return (
     <div>
       <div>
-        <select name="order" onChange={handleClick}>
+        <select
+          className={styles.selecOrder}
+          name="order"
+          onChange={handleClick}
+        >
           <option value="Ascendente">Ascendente</option>
           <option value="Descendente">Descendente</option>
         </select>
         <select
+          className={styles.selectGender}
           name="filter"
           onChange={(event) => {
             dispatch(filterCards(event.target.value));

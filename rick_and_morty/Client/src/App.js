@@ -16,6 +16,7 @@ import Detail from "./components/Detail/Detail.jsx";
 import Form from "./components/Formulario/Form.jsx";
 import Favorites from "./components/Favorites/Favorites.jsx";
 import Home from "./components/Home/Home.jsx";
+import Error404 from "./components/Error404/Error404.jsx";
 
 function App() {
   //
@@ -160,6 +161,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/detail/:detailId" element={<Detail />} />
+        <Route path="/error" element={<Error404 />} />
         {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
       </Routes>
     </div>

@@ -1,0 +1,18 @@
+.selecOrder {
+  font-family: "Anton", sans-serif;
+  margin: 1px 1px 1px 1px;
+  width: 150px;
+  font-size: 20px;
+  height: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+.selectGender {
+  font-family: "Anton", sans-serif;
+  margin: 1px 1px 1px 1px;
+  width: 150px;
+  font-size: 20px;
+  height: auto;
+  border-radius: 10px;
+  text-align: center;
+}

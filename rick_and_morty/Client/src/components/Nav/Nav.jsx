@@ -31,6 +31,7 @@ export default function Nav(props) {
           <NavLinkMe to="/characters">Characters</NavLinkMe>
           <NavLinkMe to="/about">About</NavLinkMe>
           <NavLinkMe to="/favorites">Favorites</NavLinkMe>
+          <NavLinkMe to="/error">Otra Dimensión</NavLinkMe>
         </div>
       </div>
       <div className={styles.navsearch}>
