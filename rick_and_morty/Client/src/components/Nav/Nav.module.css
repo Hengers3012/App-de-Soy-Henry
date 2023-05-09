@@ -7,7 +7,7 @@
 .navContenedor {
   height: 60px;
   width: 90vw;
-  background-color: rgba(17, 20, 17, 0.7);
+  background-color: rgba(17, 20, 17, 0.66);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
