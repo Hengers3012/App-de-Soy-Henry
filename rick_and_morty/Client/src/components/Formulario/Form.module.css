@@ -35,6 +35,25 @@
   transition: all 1.5s ease 0.55s;
   /*background-size: cover;*/
   border-radius: 15px 0 0 15px;
+  animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  0% {
+    transform: rotate(-10deg);
+  }
 }
 
 .containerLogin {
