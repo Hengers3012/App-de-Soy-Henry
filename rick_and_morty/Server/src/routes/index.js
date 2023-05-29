@@ -1,5 +1,7 @@
 const express = require("express");
 
+// Otra Forma de Realizar las importaciones de los componentes:
+
 // const { login } = require("../controllers/login.js");
 // const { getCharById } = require("../controllers/getCharById.js");
 // const {
